@@ -1,0 +1,41 @@
+<h1>Listing sales</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Saleterminal</th>
+      <th>Merchant</th>
+      <th>Salesrep</th>
+      <th>Sale price</th>
+      <th>Sale date</th>
+      <th>Downpayment</th>
+      <th>Finance amount</th>
+      <th>Finance rate</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= sale.saleterminal_id %></td>
+        <td><%= sale.merchant_id %></td>
+        <td><%= sale.salesrep_id %></td>
+        <td><%= sale.sale_price %></td>
+        <td><%= sale.sale_date %></td>
+        <td><%= sale.downpayment %></td>
+        <td><%= sale.finance_amount %></td>
+        <td><%= sale.finance_rate %></td>
+        <td><%= link_to 'Show', sale %></td>
+        <td><%= link_to 'Edit', edit_sale_path(sale) %></td>
+        <td><%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sale', new_sale_path %>

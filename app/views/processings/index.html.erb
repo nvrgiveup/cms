@@ -1,0 +1,35 @@
+<h1>Listing processings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Discountrate</th>
+      <th>Transfee</th>
+      <th>Batchfee</th>
+      <th>Annualfee</th>
+      <th>Statementfee</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @processings.each do |processing| %>
+      <tr>
+        <td><%= processing.discountrate %></td>
+        <td><%= processing.transfee %></td>
+        <td><%= processing.batchfee %></td>
+        <td><%= processing.annualfee %></td>
+        <td><%= processing.statementfee %></td>
+        <td><%= link_to 'Show', processing %></td>
+        <td><%= link_to 'Edit', edit_processing_path(processing) %></td>
+        <td><%= link_to 'Destroy', processing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Processing', new_processing_path %>

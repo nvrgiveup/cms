@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stock number:</strong>
+  <%= @saleterminal.stock_number %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @saleterminal.manufacturer_id %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @saleterminal.model %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @saleterminal.year %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @saleterminal.color %>
+</p>
+
+<p>
+  <strong>Terminaltype:</strong>
+  <%= @saleterminal.terminaltype_id %>
+</p>
+
+<p>
+  <strong>Purchase date:</strong>
+  <%= @saleterminal.purchase_date %>
+</p>
+
+<p>
+  <strong>Invoice price:</strong>
+  <%= @saleterminal.invoice_price %>
+</p>
+
+<p>
+  <strong>Sale price:</strong>
+  <%= @saleterminal.sale_price %>
+</p>
+
+<p>
+  <strong>Features note:</strong>
+  <%= @saleterminal.features_note %>
+</p>
+
+<%= link_to 'Edit', edit_saleterminal_path(@saleterminal) %> |
+<%= link_to 'Back', saleterminals_path %>

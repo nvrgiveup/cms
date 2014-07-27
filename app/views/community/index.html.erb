@@ -1,0 +1,19 @@
+<h1>My Community of Merchants!</h1>
+<p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>City</th>
+    <th>State</th>
+</tr>
+<% @merchantlist.each do |c| %>
+  <tr>
+    <td><%= c.name %></td>
+    <td><%= number_to_phone(c.merch_phone)%></td>
+    <td><%= c.merch_city %></td>
+    <td><%= c.merch_state %></td>
+</tr>
+<% end %>
+</table>
+</p>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  saleterminal_id: 1
+  service_date: 2014-03-20
+  maint_notes: MyText
+
+two:
+  saleterminal_id: 1
+  service_date: 2014-03-20
+  maint_notes: MyText

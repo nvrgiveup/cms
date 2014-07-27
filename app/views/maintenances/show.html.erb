@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Saleterminal:</strong>
+  <%= @maintenance.saleterminal_id %>
+</p>
+
+<p>
+  <strong>Service date:</strong>
+  <%= @maintenance.service_date %>
+</p>
+
+<p>
+  <strong>Maint notes:</strong>
+  <%= @maintenance.maint_notes %>
+</p>
+
+<%= link_to 'Edit', edit_maintenance_path(@maintenance) %> |
+<%= link_to 'Back', maintenances_path %>

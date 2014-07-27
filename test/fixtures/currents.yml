@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  merchant_id: MyString
+  current_processing: false
+  current_discount: 1.5
+  current_transfee: 1.5
+  current_terminal_lease: false
+  current_term_model: MyString
+  current_notes: MyText
+
+two:
+  merchant_id: MyString
+  current_processing: false
+  current_discount: 1.5
+  current_transfee: 1.5
+  current_terminal_lease: false
+  current_term_model: MyString
+  current_notes: MyText

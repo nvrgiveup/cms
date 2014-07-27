@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  promo_title: MyString
+  promo_description: MyText
+  promo_imagepath: 
+  promo_startdate: 2014-02-25
+  promo_enddate: 2014-02-25
+
+two:
+  promo_title: MyString
+  promo_description: MyText
+  promo_imagepath: 
+  promo_startdate: 2014-02-25
+  promo_enddate: 2014-02-25

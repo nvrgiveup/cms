@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  discountrate: 9.99
+  transfee: 9.99
+  batchfee: 9.99
+  annualfee: 1.5
+  statementfee: 1.5
+
+two:
+  discountrate: 9.99
+  transfee: 9.99
+  batchfee: 9.99
+  annualfee: 1.5
+  statementfee: 1.5

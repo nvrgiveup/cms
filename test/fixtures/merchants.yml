@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  merch_fname: MyString
+  merch_lname: MyString
+  merch_dba: MyString
+  merch_email: MyString
+  merch_phone: MyString
+  merch_cell: MyString
+  merch_fax: MyString
+  merch_address1: MyString
+  merch_address2: MyString
+  merch_city: MyString
+  merch_state: MyString
+  merch_zip: MyString
+  merch_notes: MyText
+  merchant_id: 1
+
+two:
+  merch_fname: MyString
+  merch_lname: MyString
+  merch_dba: MyString
+  merch_email: MyString
+  merch_phone: MyString
+  merch_cell: MyString
+  merch_fax: MyString
+  merch_address1: MyString
+  merch_address2: MyString
+  merch_city: MyString
+  merch_state: MyString
+  merch_zip: MyString
+  merch_notes: MyText
+  merchant_id: 1

@@ -1,0 +1,73 @@
+<%= form_for(@merchant) do |f| %>
+  <% if @merchant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@merchant.errors.count, "error") %> prohibited this merchant from being saved:</h2>
+
+      <ul>
+      <% @merchant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :merch_fname %><br>
+    <%= f.text_field :merch_fname %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_lname %><br>
+    <%= f.text_field :merch_lname %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_dba %><br>
+    <%= f.text_field :merch_dba %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_email %><br>
+    <%= f.text_field :merch_email %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_phone %><br>
+    <%= f.text_field :merch_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_cell %><br>
+    <%= f.text_field :merch_cell %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_fax %><br>
+    <%= f.text_field :merch_fax %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_address1 %><br>
+    <%= f.text_field :merch_address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_address2 %><br>
+    <%= f.text_field :merch_address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_city %><br>
+    <%= f.text_field :merch_city %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_state %><br>
+    <%= f.text_field :merch_state %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_zip %><br>
+    <%= f.text_field :merch_zip %>
+  </div>
+  <div class="field">
+    <%= f.label :merch_notes %><br>
+    <%= f.text_area :merch_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :merchant_id %><br>
+    <%= f.number_field :merchant_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

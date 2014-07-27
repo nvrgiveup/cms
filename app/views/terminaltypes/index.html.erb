@@ -1,0 +1,27 @@
+<h1>Listing terminaltypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @terminaltypes.each do |terminaltype| %>
+      <tr>
+        <td><%= terminaltype.type_name %></td>
+        <td><%= link_to 'Show', terminaltype %></td>
+        <td><%= link_to 'Edit', edit_terminaltype_path(terminaltype) %></td>
+        <td><%= link_to 'Destroy', terminaltype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Terminaltype', new_terminaltype_path %>

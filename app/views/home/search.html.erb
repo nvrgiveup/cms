@@ -1,0 +1,34 @@
+<p> <h1>Search</h1> </p>
+
+<%= form_tag :action => 'search' do %>
+	<p>What is Merchants's last name: 
+	<%= text_field_tag 'merchname', @merchname %> </p>
+	<hr/>
+	<% if @results>0 %>
+		<% if @merchlist.length >0 %>
+			<p> Here is the search results:</p>
+			<p>
+			<table>
+			<tr>
+				<th>Name</th>
+				<th>Phone</th>
+				<th>City</th>
+				<th>State</th>
+			</tr>
+			<% @merchlist.each do |c| %>
+				<tr>
+				<td><%= link_to c.name, merchant_path(c.id) %></td>
+				<td><%= number_to_phone(c.merch_phone) %></td>
+				<td><%= c.merch_city %></td>
+				<td><%= c.merch_state %></td>
+				</tr>
+			<% end %>
+			</table>
+
+		<% else%>
+			<p>There was an error in retrieving data. Try again!</p>
+		<% end %>
+	<% end %>
+
+	<%= submit_tag 'Send' %>
+<% end %>

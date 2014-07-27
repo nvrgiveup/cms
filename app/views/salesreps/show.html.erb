@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rep fname:</strong>
+  <%= @salesrep.rep_fname %>
+</p>
+
+<p>
+  <strong>Rep lname:</strong>
+  <%= @salesrep.rep_lname %>
+</p>
+
+<p>
+  <strong>Rep email:</strong>
+  <%= @salesrep.rep_email %>
+</p>
+
+<p>
+  <strong>Rep phone:</strong>
+  <%= @salesrep.rep_phone %>
+</p>
+
+<%= link_to 'Edit', edit_salesrep_path(@salesrep) %> |
+<%= link_to 'Back', salesreps_path %>

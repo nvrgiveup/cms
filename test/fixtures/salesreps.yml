@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rep_fname: MyString
+  rep_lname: MyString
+  rep_email: MyString
+  rep_phone: MyString
+
+two:
+  rep_fname: MyString
+  rep_lname: MyString
+  rep_email: MyString
+  rep_phone: MyString

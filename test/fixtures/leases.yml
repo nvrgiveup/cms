@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  saleterminal_id: 1
+  merchant_id: 1
+  salesrep_id: 1
+  lease_price: 1.5
+  lease_date: 2014-03-20
+  lease_term_months: 1
+
+two:
+  saleterminal_id: 1
+  merchant_id: 1
+  salesrep_id: 1
+  lease_price: 1.5
+  lease_date: 2014-03-20
+  lease_term_months: 1

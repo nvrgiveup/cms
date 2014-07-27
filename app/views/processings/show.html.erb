@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Discountrate:</strong>
+  <%= @processing.discountrate %>
+</p>
+
+<p>
+  <strong>Transfee:</strong>
+  <%= @processing.transfee %>
+</p>
+
+<p>
+  <strong>Batchfee:</strong>
+  <%= @processing.batchfee %>
+</p>
+
+<p>
+  <strong>Annualfee:</strong>
+  <%= @processing.annualfee %>
+</p>
+
+<p>
+  <strong>Statementfee:</strong>
+  <%= @processing.statementfee %>
+</p>
+
+<%= link_to 'Edit', edit_processing_path(@processing) %> |
+<%= link_to 'Back', processings_path %>

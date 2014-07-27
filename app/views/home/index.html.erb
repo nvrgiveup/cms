@@ -1,0 +1,27 @@
+ <h1>Welcome to Card Merchant Solutions!</h1>
+ 
+ <p>
+ <b>Current Time/Date : <%= @time %></b>
+</p>
+
+<h1>Current Promotions</h1>
+<p>
+<table>
+  <tr>
+    <th>Promotion</th>
+    <th>Details</th>
+    <th>Image</th>
+    <th>Start</th>
+    <th>End</th>
+</tr>
+<% @promotionlist .each do |c| %>
+  <tr>
+    <td><%= c.promo_title %></td>
+    <td><%= c.promo_description %></td>
+    <td><%= c.promo_imagepath %></td>
+    <td><%= c.promo_startdate%></td>
+    <td><%= c.promo_enddate %></td>
+</tr>
+<% end %>
+</table>
+</p>

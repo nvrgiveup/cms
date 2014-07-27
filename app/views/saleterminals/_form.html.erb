@@ -1,0 +1,57 @@
+<%= form_for(@saleterminal) do |f| %>
+  <% if @saleterminal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@saleterminal.errors.count, "error") %> prohibited this saleterminal from being saved:</h2>
+
+      <ul>
+      <% @saleterminal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :stock_number %><br>
+    <%= f.text_field :stock_number %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer_id %><br>
+    <%= f.number_field :manufacturer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.text_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :terminaltype_id %><br>
+    <%= f.number_field :terminaltype_id %>
+  </div>
+  <div class="field">
+    <%= f.label :purchase_date %><br>
+    <%= f.date_select :purchase_date %>
+  </div>
+  <div class="field">
+    <%= f.label :invoice_price %><br>
+    <%= f.text_field :invoice_price %>
+  </div>
+  <div class="field">
+    <%= f.label :sale_price %><br>
+    <%= f.text_field :sale_price %>
+  </div>
+  <div class="field">
+    <%= f.label :features_note %><br>
+    <%= f.text_area :features_note %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

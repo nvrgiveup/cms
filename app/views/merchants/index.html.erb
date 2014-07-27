@@ -1,0 +1,53 @@
+<h1>Listing merchants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Merch fname</th>
+      <th>Merch lname</th>
+      <th>Merch dba</th>
+      <th>Merch email</th>
+      <th>Merch phone</th>
+      <th>Merch cell</th>
+      <th>Merch fax</th>
+      <th>Merch address1</th>
+      <th>Merch address2</th>
+      <th>Merch city</th>
+      <th>Merch state</th>
+      <th>Merch zip</th>
+      <th>Merch notes</th>
+      <th>Merchant</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @merchants.each do |merchant| %>
+      <tr>
+        <td><%= merchant.merch_fname %></td>
+        <td><%= merchant.merch_lname %></td>
+        <td><%= merchant.merch_dba %></td>
+        <td><%= merchant.merch_email %></td>
+        <td><%= merchant.merch_phone %></td>
+        <td><%= merchant.merch_cell %></td>
+        <td><%= merchant.merch_fax %></td>
+        <td><%= merchant.merch_address1 %></td>
+        <td><%= merchant.merch_address2 %></td>
+        <td><%= merchant.merch_city %></td>
+        <td><%= merchant.merch_state %></td>
+        <td><%= merchant.merch_zip %></td>
+        <td><%= merchant.merch_notes %></td>
+        <td><%= merchant.merchant_id %></td>
+        <td><%= link_to 'Show', merchant %></td>
+        <td><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
+        <td><%= link_to 'Destroy', merchant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Merchant', new_merchant_path %>

@@ -1,0 +1,124 @@
+<p id="notice"><%= notice %></p>
+<p><b><%= @merchant.merch_fname %>  <%= @merchant.merch_lname %> &nbsp &nbsp &nbsp &nbsp &nbsp MID: &nbsp <%= @merchant.merchant_id %> &nbsp &nbsp &nbsp &nbsp &nbsp DBA: &nbsp <%= @merchant.merch_dba %> </b></p>
+<table>
+	<tr>
+		<td>
+			<b>Address:</b><br/>
+				<%= @merchant.merch_address1 %><br/>
+				<%= @merchant.merch_address2 %> <br/>
+				<%= @merchant.merch_city %>,
+				<%= @merchant.merch_state %>
+				<%= @merchant.merch_zip %>
+		</td>
+		
+		<td>
+			<b>Email: </b> <%= @merchant.merch_email %> </br>
+			<b>Phone:</b> <%= number_to_phone(@merchant.merch_phone) %> </br>
+			
+		</td>
+	</tr>
+</table>
+<p>
+  <b>Special Notes:</b> <%= @merchant.merch_notes %>
+</p>
+<hr>
+Merchants Current Processing details
+<table>
+  <thead>
+    <tr>
+      <th>Current processing</th>
+      <th>Current discount</th>
+      <th>Current transfee</th>
+      <th>Current terminal lease</th>
+      <th>Current term model</th>
+      <th>Current notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @currents.each do |current| %>
+      <tr>
+        <td><%= current.current_processing %></td>
+        <td><%= current.current_discount %></td>
+        <td><%= current.current_transfee %></td>
+        <td><%= current.current_terminal_lease %></td>
+        <td><%= current.current_term_model %></td>
+        <td><%= current.current_notes %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<hr>
+
+Here are the past purchases of this customer:
+<table>
+  <thead>
+    <tr>
+      <th>Manufacturer</th>
+      <th>Saleterminal</th>
+      <th>Salesrep</th>
+      <th>Sale price</th>
+      <th>Sale date</th>
+      <th>Downpayment</th>
+      <th>Finance amount</th>
+      <th>Finance rate</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+      	<td><%= Manufacturer.find(Saleterminal.find(sale.saleterminal_id).manufacturer_id).manufacturer_name %></td>
+        <td><%= Saleterminal.find(sale.saleterminal_id).model %></td>
+        <td><%= Salesrep.find(sale.salesrep_id).rep_lname %></td>
+        <td><%= number_to_currency(sale.sale_price) %></td>
+        <td><%= sale.sale_date %></td>
+        <td><%= number_to_currency(sale.downpayment) %></td>
+        <td><%= number_to_currency(sale.finance_amount) %></td>
+        <td><%= number_to_percentage(sale.finance_rate) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+
+Here are the past leases of this customer:
+<table>
+  <thead>
+    <tr>
+      <th>Manufacturer</th>
+      <th>Saleterminal</th>
+      <th>Salesrep</th>
+      <th>Lease price</th>
+      <th>Lease date</th>
+      <th>Lease term months</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leases.each do |lease| %>
+      <tr>
+      	<td><%= Manufacturer.find(Saleterminal.find(lease.saleterminal_id).manufacturer_id).manufacturer_name %></td>
+        <td><%= Saleterminal.find(lease.saleterminal_id).model %></td>
+        <td><%= Salesrep.find(lease.salesrep_id).rep_lname %></td>
+        <td><%= number_to_currency(lease.lease_price) %></td>
+        <td><%= lease.lease_date %></td>
+        <td><%= lease.lease_term_months %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+
+<%= link_to 'Edit', edit_merchant_path(@merchant) %> |
+<%= link_to 'Back', :back %>

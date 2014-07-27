@@ -1,0 +1,37 @@
+<h1>Listing leases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Saleterminal</th>
+      <th>Merchant</th>
+      <th>Salesrep</th>
+      <th>Lease price</th>
+      <th>Lease date</th>
+      <th>Lease term months</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leases.each do |lease| %>
+      <tr>
+        <td><%= lease.saleterminal_id %></td>
+        <td><%= lease.merchant_id %></td>
+        <td><%= lease.salesrep_id %></td>
+        <td><%= lease.lease_price %></td>
+        <td><%= lease.lease_date %></td>
+        <td><%= lease.lease_term_months %></td>
+        <td><%= link_to 'Show', lease %></td>
+        <td><%= link_to 'Edit', edit_lease_path(lease) %></td>
+        <td><%= link_to 'Destroy', lease, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lease', new_lease_path %>

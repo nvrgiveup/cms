@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  saleterminal_id: 1
+  merchant_id: 1
+  salesrep_id: 1
+  sale_price: 1.5
+  sale_date: 2014-03-20
+  downpayment: 1.5
+  finance_amount: 1.5
+  finance_rate: 1.5
+
+two:
+  saleterminal_id: 1
+  merchant_id: 1
+  salesrep_id: 1
+  sale_price: 1.5
+  sale_date: 2014-03-20
+  downpayment: 1.5
+  finance_amount: 1.5
+  finance_rate: 1.5

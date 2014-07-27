@@ -1,0 +1,45 @@
+<%= form_for(@current) do |f| %>
+  <% if @current.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@current.errors.count, "error") %> prohibited this current from being saved:</h2>
+
+      <ul>
+      <% @current.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :merchant_id %><br>
+    <%= f.text_field :merchant_id %>
+  </div>
+  <div class="field">
+    <%= f.label :current_processing %><br>
+    <%= f.check_box :current_processing %>
+  </div>
+  <div class="field">
+    <%= f.label :current_discount %><br>
+    <%= f.text_field :current_discount %>
+  </div>
+  <div class="field">
+    <%= f.label :current_transfee %><br>
+    <%= f.text_field :current_transfee %>
+  </div>
+  <div class="field">
+    <%= f.label :current_terminal_lease %><br>
+    <%= f.check_box :current_terminal_lease %>
+  </div>
+  <div class="field">
+    <%= f.label :current_term_model %><br>
+    <%= f.text_field :current_term_model %>
+  </div>
+  <div class="field">
+    <%= f.label :current_notes %><br>
+    <%= f.text_area :current_notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

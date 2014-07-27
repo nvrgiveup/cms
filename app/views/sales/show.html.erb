@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+  
+
+<p>
+  <strong>Saleterminal:</strong>
+  <%= @sale.saleterminal_id %>
+</p>
+
+<p>
+  <strong>Merchant:</strong>
+  <%= @sale.merchant_id %>
+</p>
+
+<p>
+  <strong>Salesrep:</strong>
+  <%= @sale.salesrep_id %>
+</p>
+
+<p>
+  <strong>Sale price:</strong>
+  <%= number_to_currency(sale.sale_price) %>
+</p>
+
+<p>
+  <strong>Sale date:</strong>
+  <%= @sale.sale_date %>
+</p>
+
+<p>
+  <strong>Downpayment:</strong>
+  <%= @sale.downpayment %>
+</p>
+
+<p>
+  <strong>Finance amount:</strong>
+  <%= @sale.finance_amount %>
+</p>
+
+<p>
+  <strong>Finance rate:</strong>
+  <%= @sale.finance_rate %>
+</p>
+
+<%= link_to 'Edit', edit_sale_path(@sale) %> |
+<%= link_to 'Back', sales_path %>

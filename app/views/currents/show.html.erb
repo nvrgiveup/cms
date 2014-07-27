@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Merchant:</strong>
+  <%= @current.merchant_id %>
+</p>
+
+<p>
+  <strong>Current processing:</strong>
+  <%= @current.current_processing %>
+</p>
+
+<p>
+  <strong>Current discount:</strong>
+  <%= @current.current_discount %>
+</p>
+
+<p>
+  <strong>Current transfee:</strong>
+  <%= @current.current_transfee %>
+</p>
+
+<p>
+  <strong>Current terminal lease:</strong>
+  <%= @current.current_terminal_lease %>
+</p>
+
+<p>
+  <strong>Current term model:</strong>
+  <%= @current.current_term_model %>
+</p>
+
+<p>
+  <strong>Current notes:</strong>
+  <%= @current.current_notes %>
+</p>
+
+<%= link_to 'Edit', edit_current_path(@current) %> |
+<%= link_to 'Back', currents_path %>

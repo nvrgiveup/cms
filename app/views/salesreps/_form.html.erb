@@ -1,0 +1,50 @@
+<script src="../_js/jquery-1.7.2.min.js"></script>
+<script>
+$(document).ready(function() {
+ 
+    
+  $('#submission').focus(function()
+    {  
+     $(this).css('background-color', 'tan')    
+     alert("Check all data for accuracy. Then click the submit button again.");    
+    
+    }); //end focus       
+    
+         }); //end ready
+         </script>
+
+
+
+<%= form_for(@salesrep) do |f| %>
+  <% if @salesrep.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@salesrep.errors.count, "error") %> prohibited this salesrep from being saved:</h2>
+
+      <ul>
+      <% @salesrep.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rep_fname %><br>
+    <%= f.text_field :rep_fname %>
+  </div>
+  <div class="field">
+    <%= f.label :rep_lname %><br>
+    <%= f.text_field :rep_lname %>
+  </div>
+  <div class="field">
+    <%= f.label :rep_email %><br>
+    <%= f.text_field :rep_email %>
+  </div>
+  <div class="field">
+    <%= f.label :rep_phone %><br>
+    <%= f.text_field :rep_phone %>
+  </div>
+      <p>  <input name="submitButton" type="submit" id="submission" value="Submit Data" length = 20> </p>
+ 
+
+<% end %>

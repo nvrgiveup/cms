@@ -1,0 +1,39 @@
+<h1>Listing currents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Merchant</th>
+      <th>Current processing</th>
+      <th>Current discount</th>
+      <th>Current transfee</th>
+      <th>Current terminal lease</th>
+      <th>Current term model</th>
+      <th>Current notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @currents.each do |current| %>
+      <tr>
+        <td><%= current.merchant_id %></td>
+        <td><%= current.current_processing %></td>
+        <td><%= current.current_discount %></td>
+        <td><%= current.current_transfee %></td>
+        <td><%= current.current_terminal_lease %></td>
+        <td><%= current.current_term_model %></td>
+        <td><%= current.current_notes %></td>
+        <td><%= link_to 'Show', current %></td>
+        <td><%= link_to 'Edit', edit_current_path(current) %></td>
+        <td><%= link_to 'Destroy', current, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Current', new_current_path %>

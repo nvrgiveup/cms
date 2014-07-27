@@ -1,0 +1,45 @@
+<h1>Listing saleterminals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stock number</th>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Color</th>
+      <th>Terminaltype</th>
+      <th>Purchase date</th>
+      <th>Invoice price</th>
+      <th>Sale price</th>
+      <th>Features note</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @saleterminals.each do |saleterminal| %>
+      <tr>
+        <td><%= saleterminal.stock_number %></td>
+        <td><%= saleterminal.manufacturer_id %></td>
+        <td><%= saleterminal.model %></td>
+        <td><%= saleterminal.year %></td>
+        <td><%= saleterminal.color %></td>
+        <td><%= saleterminal.terminaltype_id %></td>
+        <td><%= saleterminal.purchase_date %></td>
+        <td><%= saleterminal.invoice_price %></td>
+        <td><%= saleterminal.sale_price %></td>
+        <td><%= saleterminal.features_note %></td>
+        <td><%= link_to 'Show', saleterminal %></td>
+        <td><%= link_to 'Edit', edit_saleterminal_path(saleterminal) %></td>
+        <td><%= link_to 'Destroy', saleterminal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Saleterminal', new_saleterminal_path %>

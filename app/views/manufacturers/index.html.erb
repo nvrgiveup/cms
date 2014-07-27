@@ -1,0 +1,33 @@
+<h1>Listing manufacturers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Manufacturer name</th>
+      <th>Manu website</th>
+      <th>Contact name</th>
+      <th>Contact phone</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @manufacturers.each do |manufacturer| %>
+      <tr>
+        <td><%= manufacturer.manufacturer_name %></td>
+        <td><%= manufacturer.manu_website %></td>
+        <td><%= manufacturer.contact_name %></td>
+        <td><%= manufacturer.contact_phone %></td>
+        <td><%= link_to 'Show', manufacturer %></td>
+        <td><%= link_to 'Edit', edit_manufacturer_path(manufacturer) %></td>
+        <td><%= link_to 'Destroy', manufacturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Manufacturer', new_manufacturer_path %>
