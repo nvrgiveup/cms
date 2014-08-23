@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-#Merchant.create(merch_fname:"Gilberto",merch_lname:"Styles",merch_dba:"Gil's Garage",merch_email:"gstyles@woohoo.com",merch_phone:"7085555785",merch_cell:"7089338474",merch_address1:"555 quick way",merch_city:"Chicago",merch_state:"Illinois",merch_zip:"60101")
-#Merchant.create(merch_fname:"Tonto",merch_lname:"Squanto",merch_dba:"Los Amigos Mexican Restaurant",merch_email:"losamigosMR@woohoo.com",merch_phone:"70831231123",merch_cell:"3125244555",merch_address1:"123 broadway",merch_city:"Chicago",merch_state:"Illinois",merch_zip:"60608")
-#Merchant.create(merch_fname:"Steven",merch_lname:"Tyler",merch_dba:"Aero Guitars",merch_email:"looselips@woohoo.com",merch_phone:"7082523131",merch_cell:"8705459565",merch_address1:"10 Ladies way",merch_city:"Chicago",merch_state:"Illinois",merch_zip:"60601")
-#Merchant.create(merch_fname:"Paul",merch_lname:"Konerko",merch_dba:"Pauls Baseball Cards",merch_email:"WSox@woohoo.com",merch_phone:"3129999999",merch_cell:"7089321414",merch_address1:"3500 S. Halsted",merch_city:"Chicago",merch_state:"Illinois",merch_zip:"60616")
+Merchant.create(merch_fname:"Gilberto",merch_lname:"Styles",merch_dba:"Gil's Garage",merch_email:"gstyles@woohoo.com",merch_phone:"7085555785",merch_cell:"7089338474",merch_address1:"555 quick way",merch_city:"Chicago",merch_state:"Illinois",merch_zip:"60101")
+Merchant.create(merch_fname:"Tonto",merch_lname:"Squanto",merch_dba:"Los Amigos Mexican Restaurant",merch_email:"losamigosMR@woohoo.com",merch_phone:"70831231123",merch_cell:"3125244555",merch_address1:"123 broadway",merch_city:"Chicago",merch_state:"Illinois",merch_zip:"60608")
+Merchant.create(merch_fname:"Steven",merch_lname:"Tyler",merch_dba:"Aero Guitars",merch_email:"looselips@woohoo.com",merch_phone:"7082523131",merch_cell:"8705459565",merch_address1:"10 Ladies way",merch_city:"Chicago",merch_state:"Illinois",merch_zip:"60601")
+Merchant.create(merch_fname:"Paul",merch_lname:"Konerko",merch_dba:"Pauls Baseball Cards",merch_email:"WSox@woohoo.com",merch_phone:"3129999999",merch_cell:"7089321414",merch_address1:"3500 S. Halsted",merch_city:"Chicago",merch_state:"Illinois",merch_zip:"60616")
 
 #Manufacturer.create(manufacturer_name:"Ingenico", manu_website:"www.ingenico.com", contact_name:"Sarah Palin", contact_phone:"7155555555")
 #Manufacturer.create(manufacturer_name:"Verifone", manu_website:"www.verifone.com", contact_name:"Veronica Vale", contact_phone:"3125856569")
@@ -20,8 +20,8 @@
 #Terminaltype.create(type_name:"pin pad")
 #Terminaltype.create(type_name:"POS")
 
-#Salesrep.create(rep_fname:"Noe",rep_lname:"Moreno",rep_email:"moreno.npc@gmail.com",rep_phone:"7089329546")
-#Salesrep.create(rep_fname:"Omar",rep_lname:"Moreno",rep_email:"o.moreno75@att.net",rep_phone:"7082599898")
+Salesrep.create(rep_fname:"Noe",rep_lname:"Moreno",rep_email:"moreno.npc@gmail.com",rep_phone:"7089329546")
+Salesrep.create(rep_fname:"Omar",rep_lname:"Moreno",rep_email:"o.moreno75@att.net",rep_phone:"7082599898")
 
 #Saleterminal.create(stock_number:"1",manufacturer_id:1,model:"ICT220",year:"2014",color:"Grey",terminaltype_id:"1",purchase_date:"2014-01-04",invoice_price:"225.99",sale_price:"400.00",features_note:"Dual COMM/Emv ready")
 #Saleterminal.create(stock_number:"2",manufacturer_id:1,model:"ICT220",year:"2014",color:"Grey",terminaltype_id:"1",purchase_date:"2014-01-04",invoice_price:"225.99",sale_price:"400.00",features_note:"Dual COMM/Emv ready")
@@ -56,16 +56,16 @@
 #Current.create(merchant_id:"21",current_discount:".0032",current_transfee:".08",current_terminal_lease:"true")
 #Current.create(merchant_id:"22",current_discount:".0010",current_transfee:".22",current_terminal_lease:"true")
 
-require 'digest/md5'
-user1 = User.new
-user1.username = "nmoreno"
-user1.password = Digest::MD5.hexdigest("nmoreno:localhost:bailey")
-user1.save
-user2 = User.new
-user2.username = "styler"
-user2.password = Digest::MD5.hexdigest("styler:localhost:crazy")
-user2.save
-user3 = User.new
-user3.username = "nyoung"
-user3.password = Digest::MD5.hexdigest("nyoung:localhost:csny")
-user3.save
+#require 'digest/md5'
+#user1 = User.new
+#user1.username = "nmoreno"
+#user1.password = Digest::MD5.hexdigest("nmoreno:localhost:bailey")
+#user1.save
+#user2 = User.new
+#user2.username = "styler"
+#user2.password = Digest::MD5.hexdigest("styler:localhost:crazy")
+#user2.save
+#user3 = User.new
+#user3.username = "nyoung"
+#user3.password = Digest::MD5.hexdigest("nyoung:localhost:csny")
+#user3.save
