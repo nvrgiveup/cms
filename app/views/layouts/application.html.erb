@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  
 <style>
 body {
 background-image: url(/assets/card.png);   
@@ -13,17 +14,16 @@ background-attachment: fixed;
 </style>
 </head>
 <body>
-
-<div style="background-color:#F5F5F5;margin-right:225px;margin-left:225px;padding:25px;border-style:solid;border-color:#909090;
+<div style="background-color:#F5F5F5;margin-right:195px;margin-left:195px;padding:10px;border-style:solid;border-color:#909090;
 border-width:5px;border-top-left-radius:25px;border-top-right-radius: 25px;"><%= render "layouts/header"%></div>
 <br>
 <!-- <div style="background-color:#696969;margin-right:225px;margin-left:225px;padding:10px;border-style:solid;border-color:#909090;
 border-width:5px;"></div> -->
 
-<div style="background-color:#CCFFFF;margin-right:225px;margin-left:225px;padding:25px;border-style:solid;border-color:#909090;
+<div style="background-color:#CCFFFF;margin-right:195px;margin-left:195px;padding:25px;border-style:solid;border-color:#909090;
 border-left-width:5px;border-right-width:5px;border-bottom-width:0px;"><%= yield %></div>
 
-<div style="background-color:#CCFFFF;margin-right:225px;margin-left:225px;padding:25px;border-style:solid;border-color:#909090;
+<div style="background-color:#CCFFFF;margin-right:195px;margin-left:195px;padding:25px;border-style:solid;border-color:#909090;
 border-width:5px;border-bottom-left-radius:25px;border-bottom-right-radius:25px;"><%= render "layouts/footer"%></div>
 
 </body>
